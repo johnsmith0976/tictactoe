@@ -54,7 +54,7 @@ const p2win = winstate.every(state => game.p2state.includes(state));
 cells.forEach(cell => cell.classList.add('disabled'))
 document.querySelector('#status').style.display === 'block';
 
-winner.textContent = p1win ? `Player ${playerone.value} has won!` : `Player ${playertwo.value} has won!`;
+winner.textContent = p1win ? `${playerone.value} has won!` : `${playertwo.value} has won!`;
  }
 }) 
 // end of if statement
