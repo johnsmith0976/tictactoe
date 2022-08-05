@@ -1,0 +1,119 @@
+:root {
+
+
+	--color: #81c3fd;
+	--color-set: #ffd801; 
+	--l: 10px;
+}
+body {
+    margin: 0;
+    background-color: #1d2951;
+}
+input {
+    width: 200px;
+    height: 25px;
+}
+.cell {
+    border: 1px solid #f5f3ce;
+
+}
+h1 {
+    text-align: center;
+    color: #f5f3ce;
+}
+.gameb {
+    display: flex;
+    flex-direction: column;
+}
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 500px;
+}
+#gameboard {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 10px;
+}
+
+.o::after {
+  
+
+        background-color: blue;
+        outline: auto;
+        outline-style: round;
+  
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+.disabled {
+    cursor: not-allowed;
+}
+.cell:not(.disabled):hover {
+    background: #eee;
+}
+
+#winner {
+
+font-size: 60px;
+text-align: center;
+color: #f5f3ce;
+
+}
+#status {
+    margin-bottom: 10px;
+}
+.center {
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+button {
+    border-radius: 12px;
+    font-size: 18px;
+    padding: 6px;
+    border: none;
+    background-color: #ef8e38;
+}
+#one, #two, #three {
+    border-top: none;
+}
+#one, #four, #seven {
+    border-left: none;
+}
+#three, #six, #nine {
+    border-right: none;
+}
+#seven, #eight, #nine {
+    border-bottom: none;
+}
+
+
+
+.cell:not(.circle).x {
+	background: linear-gradient(to top right, transparent calc(50% - var(--l) / 2), var(--color-set) calc(50% - var(--l) / 2) calc(50% + var(--l) / 2), transparent calc(50% + var(--l) / 2)),
+				linear-gradient(to bottom right, transparent calc(50% - var(--l) / 2), var(--color-set) calc(50% - var(--l) / 2) calc(50% + var(--l) / 2), transparent calc(50% + var(--l) / 2));
+	background-size: 80% 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+.cell:not(.x).o {
+	background: radial-gradient(var(--color-set) 60%, transparent 60%);
+}
